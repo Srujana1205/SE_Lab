@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Automatic Banking System</h1>
+            <nav>
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('about') }}">About</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Make a Transaction</h2>
+            <form action="{{ url_for('transaction') }}" method="POST">
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" name="description" placeholder="Enter description"></textarea>
+                </div>
+                <button type="submit" class="btn">Transfer</button>
+            </form>
+            <p><a href="{{ url_for('transaction_history') }}">View transaction history</a></p>
+        </main>
+        <footer>
+            <p>&copy; Automatic Banking System</p>
+        </footer>
+    </div>
+</body>
+</html>

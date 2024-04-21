@@ -1,1 +1,47 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Automatic Banking System</h1>
+            <nav>
+                <a href="{{ url_for('about') }}">About</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Welcome!</h2>
+            <p>Experience seamless banking with our cutting-edge Automatic Banking System. Enjoy secure transactions, detailed history, and personalized service tailored to your needs.</p>
+            <section class="features">
+                <h3>Features:</h3>
+                <ul>
+                    <li>Secure login and signup functionality</li>
+                    <li>Ability to perform transactions</li>
+                    <li>View transaction history</li>
+                    <li>Learn more about us in the About page</li>
+                </ul>
+            </section>
+            <div class="cta">
+                <p>Get started by <a href="{{ url_for('login') }}">logging in</a> or <a href="{{ url_for('signup') }}">signing up</a>.</p>
+            </div>
+            <div class="options">
+                <p>Other options:</p>
+                <ul>
+                    <li><a href="{{ url_for('transaction') }}">Make a transaction</a></li>
+                    <li><a href="{{ url_for('transaction_history') }}">View transaction history</a></li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; Automatic Banking System</p>
+        </footer>
+    </div>
+</body>
+</html>
